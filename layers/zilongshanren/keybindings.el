@@ -175,7 +175,7 @@
 (spacemacs/set-leader-keys "ys" 'ggtags-view-tag-history)
 (spacemacs/set-leader-keys "yn" 'ggtags-next-mark)
 (spacemacs/set-leader-keys "yp" 'ggtags-prev-mark)
-(spacemacs/set-leader-keys "yx" 'spacemacs/jump-to-definition-other-window)
+(spacemacs/set-leader-keys "yx" 'ggtags-find-tag-dwim)
 (spacemacs/set-leader-keys "yj" 'spacemacs/symbol-highlight-transient-state/ahs-forword-definition)
 (spacemacs/set-leader-keys "yu" 'hlt-unhighlight-symbol)
 (spacemacs/set-leader-keys "yd" 'ggtags-save-to-register)
