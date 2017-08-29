@@ -292,7 +292,12 @@ This segment overrides the modeline functionality of `org-mode-line-string'."
     (setq spacemacs-show-trailing-whitespace nil)
 
     (setq-default tab-width 4)
-    ;; set-buffer-file-coding-system -> utf8 to convert dos to utf8
+	(setq c-default-style "Linux")
+	(setq c-basic-offset 4)
+	(setq-default indent-tabs-mode nil)
+	(setq default-tab-width 4)
+
+	;; set-buffer-file-coding-system -> utf8 to convert dos to utf8
     ;; (setq inhibit-eol-conversion t)
     ;; (add-hook 'prog-mode-hook 'whitespace-mode)
 
