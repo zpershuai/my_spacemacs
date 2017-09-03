@@ -182,7 +182,7 @@
 (spacemacs/set-leader-keys "yw" 'mc--mark-symbol-at-point)
 (spacemacs/set-leader-keys "ym" 'ggtags-find-file)
 (evil-define-minor-mode-key 'normal 'ggtags-mode (kbd "C-n") 'next-error)
-(evil-define-minor-mode-key 'normal 'ggtags-mode (kbd "C-p") 'evil-paste-pop)
+(evil-define-minor-mode-key 'normal 'ggtags-mode (kbd "C-p") 'previous-error)
 
 ;;zpershuai end
 (when (spacemacs/system-is-mswindows)
