@@ -184,6 +184,16 @@
 (evil-define-minor-mode-key 'normal 'ggtags-mode (kbd "C-n") 'next-error)
 (evil-define-minor-mode-key 'normal 'ggtags-mode (kbd "C-p") 'previous-error)
 
+;; add doxygen key
+
+
+(spacemacs/set-leader-keys "df" 'doxymacs-insert-function-comment)
+(spacemacs/set-leader-keys "dF" 'doxymacs-insert-file-comment)
+(spacemacs/set-leader-keys "db" 'doxymacs-insert-blank-multiline-comment)
+(spacemacs/set-leader-keys "ds" 'doxymacs-insert-blank-singleline-comment)
+(spacemacs/set-leader-keys "dg" 'doxymacs-insert-grouping-comments)
+(spacemacs/set-leader-keys "ds" 'doxymacs-insert-member-comment)
+
 ;;zpershuai end
 (when (spacemacs/system-is-mswindows)
   (global-set-key (kbd "s-=") 'spacemacs/scale-up-font)

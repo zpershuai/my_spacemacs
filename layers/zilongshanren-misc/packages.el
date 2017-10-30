@@ -28,6 +28,7 @@
         helm-github-stars
         helm
         tiny
+        geeknote
         ;; smartparens
         flyspell-correct
         peep-dired

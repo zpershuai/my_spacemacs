@@ -422,6 +422,8 @@
 ;;
 (defun zilongshanren-programming/init-doxymacs ()
   "Initialize doxymacs"
+  ;; (add-to-list 'load-path "/Users/zpershuai/.spacemacs.d/layers/zilongshanren-programming/local/doxymacs")
+  ;; (require 'doxymacs)
   (use-package doxymacs
     :init
     (add-hook 'c-mode-common-hook 'doxymacs-mode)

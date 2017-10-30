@@ -93,7 +93,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(sicp)
+   ;; dotspacemacs-additional-packages '(sicp)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages
@@ -339,10 +339,19 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
+  ;; (setq configuration-layer--elpa-archives
+  ;;     '(("melpa-cn" . "http://elpa.emacs-china.com/melpa/")
+  ;;       ("org-cn"   . "http://elpa.emacs-china.com/org/")
+  ;;       ("gnu-cn"   . "http://elpa.emacs-china.com/gnu/")))
+
+
+  (add-to-list 'load-path "~/.spacemacs.d/layers/zilongshanren-programming/local/doxymacs")
+  (require 'doxymacs)
+
   (setq configuration-layer--elpa-archives
-        '(("melpa-cn" . "https://elpa.zilongshanren.com/melpa/")
-          ("org-cn"   . "https://elpa.zilongshanren.com/org/")
-          ("gnu-cn"   . "https://elpa.zilongshanren.com/gnu/")))
+        '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+          ("org-cn" . "http://elpa.emacs-china.org/org/")
+          ("gnu-cn" . "http://elpa.emacs-china.org/gnu/")))
 
   ;; https://github.com/syl20bnr/spacemacs/issues/2705
   ;; (setq tramp-mode nil)
