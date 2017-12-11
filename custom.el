@@ -12,6 +12,9 @@
  '(company-show-numbers t)
  '(company-statistics-auto-restore nil)
  '(ctags-update-delay-seconds 1024)
+ '(custom-safe-themes
+   (quote
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
  '(erc-nick "zilongshanren")
  '(erc-port 6666)
  '(evil-want-C-i-jump t)
