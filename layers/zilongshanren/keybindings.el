@@ -193,6 +193,9 @@
 (spacemacs/set-leader-keys "ds" 'doxymacs-insert-blank-singleline-comment)
 (spacemacs/set-leader-keys "dg" 'doxymacs-insert-grouping-comments)
 (spacemacs/set-leader-keys "ds" 'doxymacs-insert-member-comment)
+(spacemacs/set-leader-keys "ps" 'helm-do-ag-project-root)
+
+
 
 ;;zpershuai end
 (when (spacemacs/system-is-mswindows)
