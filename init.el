@@ -177,7 +177,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    ;; dotspacemacs-themes '(solarized-light
    ;;                        solarized-dark)
-   dotspacemacs-themes '(spacemacs-light
+   dotspacemacs-themes '(spacemacs-dark
                           solarized-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -349,6 +349,8 @@ values."
 
   (add-to-list 'load-path "~/.spacemacs.d/layers/zilongshanren-programming/local/doxymacs")
   (require 'doxymacs)
+
+  (add-to-list 'load-path "~/.spacemacs.d/layers/zilongshanren-programming/local/etags-select")
 
   (setq configuration-layer--elpa-archives
         '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
