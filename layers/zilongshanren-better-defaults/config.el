@@ -137,7 +137,7 @@ Single Capitals as you type."
   (if (and (executable-find "wc")
            (> (string-to-number (shell-command-to-string (format "wc -l %s" (buffer-file-name))))
               5000))
-      (linum-mode -1)))
+      (linum-mode 1)))
 
 (add-hook 'find-file-hook 'spacemacs/check-large-file)
 
