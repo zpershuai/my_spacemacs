@@ -93,7 +93,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   ;; dotspacemacs-additional-packages '(sicp)
+   ;; dotspacemacs-additional-packages '(auto-complete sicp)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages
@@ -112,8 +112,7 @@ values."
                     helm-c-yasnippet ace-jump-helm-line helm-make magithub
                     helm-themes helm-swoop helm-spacemacs-help smeargle
                     ido-vertical-mode flx-ido company-quickhelp counsel-projectile
-                    window-purpose ivy-purpose helm-purpose spacemacs-purpose-popwin
-                    )
+                    window-purpose ivy-purpose helm-purpose spacemacs-purpose-popwin)
    dotspacemacs-install-packages 'used-only
    dotspacemacs-delete-orphan-packages t))
 
@@ -373,6 +372,7 @@ values."
   )
 
 (defun dotspacemacs/user-config ()
+  (global-company-mode)
   ;;解决org表格里面中英文对齐的问题
   (when (configuration-layer/layer-usedp 'chinese)
     (when (and (spacemacs/system-is-mac) window-system)
@@ -404,6 +404,7 @@ values."
   (global-hungry-delete-mode t)
   (spacemacs|diminish helm-gtags-mode)
   (spacemacs|diminish ggtags-mode)
+  (spacemacs|diminish auto-complete-mode)
   (spacemacs|diminish which-key-mode)
   (spacemacs|diminish spacemacs-whitespace-cleanup-mode)
   (spacemacs|diminish counsel-mode)
