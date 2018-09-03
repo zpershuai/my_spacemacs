@@ -196,6 +196,9 @@
 (spacemacs/set-leader-keys "ds" 'doxymacs-insert-member-comment)
 (spacemacs/set-leader-keys "ps" 'helm-do-ag-project-root)
 
+;; add code style
+(spacemacs/set-leader-keys "cf" 'zp_format-code)
+
 
 
 ;;zpershuai end

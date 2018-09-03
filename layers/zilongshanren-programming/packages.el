@@ -587,3 +587,19 @@
     (setq company-c-headers-path-user
           (quote
            ("/Users/guanghui/cocos2d-x/cocos/platform" "/Users/guanghui/cocos2d-x/cocos" "." "/Users/guanghui/cocos2d-x/cocos/audio/include/")))))
+
+
+(let ((style "google"))
+  (setq format-command (format "astyle --style=%s" style)))
+
+(global-auto-revert-mode t)
+
+(defun zp_format-code ()
+  "Format current buffer"
+  (interactive)
+  (let ((file (buffer-file-name)))
+    (save-excursion
+      (shell-command-to-string (format "%s %s" format-command file))
+      (message "Code formatted"))))
+
+(provide 'init-astyle)
