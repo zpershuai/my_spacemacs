@@ -25,6 +25,21 @@
     (end-of-line)
     (insert ";")))
 
+(defun my-jk ()
+  (interactive)
+  (let* ((initial-key ?j)
+         (final-key ?j)
+         (timeout 0.5)
+         (event (read-event nil nil timeout)))
+    (if event
+        ;; timeout met
+        (if (and (characterp event) (= event final-key))
+            (evil-normal-state)
+          (insert initial-key)
+          (push event unread-command-events))
+      ;; timeout exceeded
+      (insert initial-key))))
+
 (defun zilongshanren/delete-semicolon-at-the-end-of-this-line ()
   (interactive)
   (save-excursion

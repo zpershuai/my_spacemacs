@@ -672,7 +672,9 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
 (defun zilongshanren-misc/post-init-evil ()
   (progn
     (setcdr evil-insert-state-map nil)
+    ;; (define-key evil-insert-state-map [escape] 'evil-normal-state)
     (define-key evil-insert-state-map [escape] 'evil-normal-state)
+    (define-key evil-insert-state-map (kbd "j") 'my-jk)
 
     ;; disable highlight when use swiper or evil ex search, this option won't effect evil-ex-search-next command
     (setq-default evil-ex-search-persistent-highlight nil)
@@ -744,8 +746,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
     (define-key evil-visual-state-map (kbd "mp") 'mc/mark-previous-like-this)
     (define-key evil-visual-state-map (kbd "ma") 'mc/mark-all-like-this)
     (define-key evil-visual-state-map (kbd "mf") 'mc/mark-all-like-this-in-defun)
-
-
+    
     ;; in spacemacs, we always use evilify miscro state
     (evil-add-hjkl-bindings package-menu-mode-map 'emacs)
     ;; Don't move back the cursor one position when exiting insert mode
