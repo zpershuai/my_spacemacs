@@ -475,7 +475,9 @@
 
 
     (add-hook 'c++-mode-hook 'my-setup-develop-environment)
+    (add-hook 'c++-mode-hook 'projectile-mode)
     (add-hook 'c-mode-hook 'my-setup-develop-environment)
+    (add-hook 'c-mode-hook 'projectile-mode)
 
 
     ;; http://stackoverflow.com/questions/23553881/emacs-indenting-of-c11-lambda-functions-cc-mode
